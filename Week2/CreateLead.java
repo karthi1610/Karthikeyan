@@ -33,10 +33,11 @@ public class CreateLead {
 		Select state = new Select(driver.findElement(By.id("createLeadForm_generalStateProvinceGeoId")));
 		state.selectByVisibleText("New York");
 		driver.findElement(By.className("smallSubmit")).click();
-		//driver.findElement(By.linkText("Edit")).click();
-		//driver.findElement(By.id("updateLeadForm_description")).clear();
-		//driver.findElement(By.id("updateLeadForm_importantNote")).sendKeys("Important Notes field");
+		driver.findElement(By.linkText("Edit")).click();
+		driver.findElement(By.id("updateLeadForm_description")).clear();
+		driver.findElement(By.id("updateLeadForm_importantNote")).sendKeys("Important Notes field");
 		//driver.findElement(By.className("submitButton")).click();
+		driver.findElement(By.xpath("//input[@value='Update']")).click();
 
 		//getTitle
 		String title = driver.getTitle();
